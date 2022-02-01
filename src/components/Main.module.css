@@ -1,0 +1,18 @@
+.portMappingGroup {
+    width: 100%;
+    padding-left: .4em;
+    box-sizing: border-box;
+}
+.portMapping {
+    display: grid;
+    grid-template-columns: 1fr 2em 1fr 3em;
+}
+.portMapping > * {
+    display: block;
+}
+.portMappingSeparator {
+    text-align: center;
+}
+.portMappingDelete {
+    text-align: center;
+}

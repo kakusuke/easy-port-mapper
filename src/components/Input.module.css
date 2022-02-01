@@ -1,0 +1,8 @@
+.full {
+    min-width: calc(100% - .4em);
+    margin-left: .2em;
+    margin-right: .2em;
+}
+.port {
+    min-width: 2.5em;
+}
