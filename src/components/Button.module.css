@@ -2,6 +2,7 @@
     display: inline-block;
     font-size: 0.6em;
 }
+
 .switch {
     display: inline-block;
     width: 3em;
@@ -14,9 +15,11 @@
     vertical-align: middle;
     transition: background-color 300ms linear;
 }
+
 .switchActive {
     background-color: #37A372;
 }
+
 .switch:after {
     content: '';
     display: block;
@@ -30,12 +33,15 @@
     box-shadow: 1px 1px 2px #545a8e;
     transition: transform 300ms linear;
 }
+
 .switchPending::after {
     transform: translateX(0.75em);
 }
+
 .switchActive::after {
     transform: translateX(1.5em);
 }
+
 .switchInactive {
     transform: translateX(0em);
 }

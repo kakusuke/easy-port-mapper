@@ -1,4 +1,4 @@
-import { Group, groupState, Item, itemState } from "../states/groupsState";
+import { Group, groupState } from "../states/groupsState";
 import React, { ChangeEvent, useCallback } from "react";
 import { useSetRecoilState } from "recoil";
 import AutoResizeInput from "./AutoResizeInput";
@@ -6,6 +6,7 @@ import AutoResizeInput from "./AutoResizeInput";
 interface GroupNameInputProps {
     group: Group
 }
+
 export default (props: GroupNameInputProps) => {
     const setGroup = useSetRecoilState(groupState(props.group.id));
     const onInput = useCallback((e: ChangeEvent<HTMLInputElement>) => {

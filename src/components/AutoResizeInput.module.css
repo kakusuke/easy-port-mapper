@@ -9,6 +9,7 @@
 .target {
     font: inherit;
 }
+
 .target[type="number"]::-webkit-outer-spin-button,
 .target[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;

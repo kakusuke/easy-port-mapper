@@ -61,7 +61,10 @@ export const itemState = selectorFamily<Item, string>({
     set: (id: string) => ({get, set}, newValue) => {
         const groups = get(groupsState);
         const group = groups.find(g => g.list.some(i => i.id === id));
-        set(groupState(group.id), {...group, list: group.list.map(i => i.id === id ? newValue : i)});
+        set(groupState(group.id), {
+            ...group,
+            list: group.list.map(i => i.id === id ? newValue : i)
+        });
     }
 });
 

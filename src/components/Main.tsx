@@ -45,9 +45,13 @@ export default () => {
                                             {item.ports.map(port =>
                                                 <li key={port.id} className={styles.portMapping}>
                                                     <span>local:<LocalPortInput port={port}/></span>
-                                                    <span className={styles.portMappingSeparator}> → </span>
-                                                    <span>{item.remoteAddr}:<RemotePortInput port={port}/></span>
-                                                    <span className={styles.portMappingDelete}><PortMappingDeleteButton item={item} port={port}/></span>
+                                                    <span
+                                                        className={styles.portMappingSeparator}> → </span>
+                                                    <span>{item.remoteAddr}:<RemotePortInput
+                                                        port={port}/></span>
+                                                    <span
+                                                        className={styles.portMappingDelete}><PortMappingDeleteButton
+                                                        item={item} port={port}/></span>
                                                 </li>
                                             )}
                                             <li><PortMappingAddButton item={item}/></li>

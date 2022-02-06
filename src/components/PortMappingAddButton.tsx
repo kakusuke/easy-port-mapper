@@ -1,5 +1,5 @@
-import { Item, itemState, PortMapping, portMappingState } from "../states/groupsState";
-import React, { ChangeEvent, useCallback } from "react";
+import { Item, itemState } from "../states/groupsState";
+import React, { useCallback } from "react";
 import { useSetRecoilState } from "recoil";
 
 import * as uuid from 'uuid';
@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 interface PortMappingAddButtonProps {
     item: Item;
 }
+
 export default (props: PortMappingAddButtonProps) => {
     const setItem = useSetRecoilState(itemState(props.item.id));
     const onClick = useCallback(() => {

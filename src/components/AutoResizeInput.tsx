@@ -1,10 +1,4 @@
-import React, {
-    CSSProperties,
-    DetailedHTMLProps,
-    InputHTMLAttributes, useEffect, useLayoutEffect,
-    useMemo,
-    useRef, useState
-} from "react";
+import React, { DetailedHTMLProps, InputHTMLAttributes, useEffect, useRef } from "react";
 
 import styles from './AutoResizeInput.module.css';
 
@@ -22,6 +16,6 @@ export default (props: DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, 
 
     return (<>
         <span ref={ref} className={`shadow ${styles.shadow}`}>{props.value}</span>
-        <input {...props} ref={target} className={`${props.className || ''} ${styles.target}`} />
+        <input {...props} ref={target} className={`${props.className || ''} ${styles.target}`}/>
     </>)
 }

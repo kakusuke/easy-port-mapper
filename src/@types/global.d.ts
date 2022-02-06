@@ -26,7 +26,7 @@ interface ConnectionState {
     state: 'unknown' | 'active' | 'inactive' | 'pending'
 }
 
-type OnConnectionChangeListener = (state: ConnectionState, msg? : string) => void;
+type OnConnectionChangeListener = (state: ConnectionState, msg?: string) => void;
 
 interface Api {
     openDockerCompose: (dir?: string) => Promise<DockerComposeMapping>;
@@ -34,5 +34,6 @@ interface Api {
     disconnect: (item: ConnectionItem) => void;
     onConnectionChange: (listener: OnConnectionChangeListener) => () => void;
 }
+
 // eslint-disable-next-line no-var
 declare var api: Api;
