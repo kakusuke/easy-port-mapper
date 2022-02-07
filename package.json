@@ -13,7 +13,7 @@
   },
   "keywords": [],
   "author": {
-    "name": "kakusuke07",
+    "name": "kakusuke",
     "email": "bananafishmonger+github@gamil.com"
   },
   "license": "MIT",
@@ -40,6 +40,18 @@
         {
           "name": "@electron-forge/maker-rpm",
           "config": {}
+        }
+      ],
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "config": {
+            "repository": {
+              "owner": "kakusuke",
+              "name": "easy-port-mapper"
+            },
+            "prerelease": true
+          }
         }
       ],
       "plugins": [
@@ -89,6 +101,7 @@
     "typescript": "~4.5.4"
   },
   "dependencies": {
+    "@electron-forge/publisher-github": "^6.0.0-beta.63",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
